@@ -1,0 +1,8 @@
+{% for quote in quotes %}
+  <div class="quote">
+      <blockquote>{{ quote.quote_text }}</blockquote>
+      <p class="author">{% if quote.author %}&ndash;
+      {% if quote.author_url %}<a href="{{ quote.author_url }}">{{ quote.author }}</a>{% else %}{{ quote.author }}{% endif %}
+      {% endif %}</p>
+  </div>
+{% endfor %}

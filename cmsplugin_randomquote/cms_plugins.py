@@ -8,7 +8,7 @@ from .models import Quote, RandomQuotePlugin
 class QuotePlugin(CMSPluginBase):
     """This plugin randomly renders a quote from the database."""
     name = _('Quote')
-    render_template = 'cmsplugin_randomquote/quote.html'
+    render_template = 'cmsplugin_randomquote/randomquotes.html'
     model = RandomQuotePlugin
 
     def render(self, context, instance, placeholder):
