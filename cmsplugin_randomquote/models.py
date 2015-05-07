@@ -13,9 +13,12 @@ class Quote(models.Model):
     def __str__(self):
         return '[%s] %s...' % (self.author, self.quote_text[:20])
 
-
+@python_2_unicode_compatible
 class RandomQuotePlugin(CMSPlugin):
     amount = models.IntegerField(
         default=1,
         help_text=_('The number of random quotes to be displayed.')
     )
+
+    def __str__(self):
+        return 'displaying %s' % (self.amount)
