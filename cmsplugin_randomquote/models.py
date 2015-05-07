@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
+from cms.models.pluginmodel import CMSPlugin
 
 @python_2_unicode_compatible
 class Quote(models.Model):
@@ -11,3 +12,10 @@ class Quote(models.Model):
 
     def __str__(self):
         return '[%s] %s...' % (self.author, self.quote_text[:20])
+
+
+class RandomQuotePlugin(CMSPlugin):
+    amount = models.IntegerField(
+        default=1,
+        help_text=_('The number of random quotes to be displayed.')
+    )
