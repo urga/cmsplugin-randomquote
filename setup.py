@@ -17,7 +17,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'django-cms>=2.1',
-        'django>=1.4.2',
+        'django-cms>=3.0',
+        'django>=1.7',
     ]
 )
