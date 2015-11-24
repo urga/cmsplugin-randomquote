@@ -1,0 +1,7 @@
+
+<div class="quote">
+    <blockquote>{{ instance.quote.quote_text }}</blockquote>
+    <p class="author">{% if instance.quote.author %}&ndash;
+    {% if instance.quote.author_url %}<a href="{{ instance.quote.author_url }}">{{ instance.quote.author }}</a>{% else %}{{ instance.quote.author }}{% endif %}
+    {% endif %}</p>
+</div>
